@@ -45,4 +45,11 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal false, @m.two_as_one?(12, 2, 1)
 	end
 
+	def test_pig_latinify
+		assert_equal "otatopay", @m.pig_latinify("potato")
+		assert_equal "ananabay", @m.pig_latinify("banana")
+		assert_equal "rashtay", @m.pig_latinify("trash")
+		assert_equal "otatopay", @m.pig_latinify("Potato")
+	end
+
 end

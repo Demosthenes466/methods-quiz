@@ -52,5 +52,20 @@ module MethodsQuiz
 
 
 	# TODO - write pig_latinify
+	def pig_latinify(str)
+		str.downcase!
+		str.lstrip
+		str.rstrip
+		if((str[0] == "a") || (str[0] =="o") || (str[0] =="u")|| (str[0] =="i")|| (str[0] =="y"))
+			str = str + "way"
+			# str.slice!(0)
+			return str
+		else
+			str = str + str[0] + "ay"
+			str.slice!(0)
+			return str
+		end
+	end
+
 
 end
