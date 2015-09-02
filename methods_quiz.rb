@@ -31,6 +31,15 @@ module MethodsQuiz
 	end
 	
 	# TODO - write closer_to
+	def closer_to?(target, a, b)
+		if((target - a).abs > (target - b).abs)
+			return b
+		elsif((target - a).abs < (target - b).abs)
+			return a
+		elsif((target - a).abs == (target - b).abs)
+			return 0
+		end
+	end
 
 	# TODO - write two_as_one?
 
