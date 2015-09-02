@@ -18,4 +18,8 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal false, @m.has_teen?(21, 8, 8)
 	end
 
+	def test_not_string
+		assert_equal "notpotato", @m.not_string?("notpotato")
+		assert_equal "notpotato", @m.not_string?("potato")
+	end
 end
