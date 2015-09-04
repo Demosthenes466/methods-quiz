@@ -50,6 +50,12 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal "ananabay", @m.pig_latinify("banana")
 		assert_equal "rashtay", @m.pig_latinify("trash")
 		assert_equal "otatopay", @m.pig_latinify("Potato")
+		assert_equal "antway", @m.pig_latinify("Ant")
+		assert_equal "*ss", @m.pig_latinify("ass")
+		assert_equal "f*ck", @m.pig_latinify("fuck")
+		assert_equal "*ss", @m.pig_latinify("ass")
+		assert_equal "tw*t", @m.pig_latinify("twat")
+		assert_equal "*sshole", @m.pig_latinify("asshole")
 	end
 
 end

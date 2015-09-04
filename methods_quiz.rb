@@ -56,6 +56,22 @@ module MethodsQuiz
 		str.downcase!
 		str.lstrip
 		str.rstrip
+		if(str == "fuck" || str == "damn"|| str == "cunt" || str == "bitch" || str == "tit")
+			str.slice!(1)
+			str.insert(1, '*')
+			return str
+
+		elsif(str == "ass" || str == "asshole")
+			str.slice!(0)
+			str.insert(0,'*')
+			return str
+		
+		elsif(str == "twat" || str == "shit")
+			str.slice!(2)
+			str.insert(2, '*')
+			return str
+		end
+
 		if((str[0] == "a") || (str[0] =="o") || (str[0] =="u")|| (str[0] =="i")|| (str[0] =="y"))
 			str = str + "way"
 			# str.slice!(0)
